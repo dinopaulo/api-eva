@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 require("dotenv").config();
-const port = process.env.PORT
+const port = process.env.PORT || 8081
 
 
 
