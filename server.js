@@ -2,7 +2,8 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
+require("dotenv").config();
+const port = process.env.PORT
 
 
 
@@ -1653,7 +1654,8 @@ app.post("/api/det_direct_coord_eval", (req, res) => {
     res.status(200).send("Data inserted successfully");
   });
   
-  app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './public_html/index.html'));
-});     
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}...`);
 });
